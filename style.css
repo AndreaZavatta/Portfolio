@@ -6,60 +6,87 @@ body {
   padding: 0;
 }
 
-.categories {
-  opacity: 0;
-}
-.categories.is-active {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-}
-.categories:not(.is-active) {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-nav {
+header nav {
   height: 80px;
   color: white;
   display: flex;
   justify-content: space-between;
   background-color: black;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 37px;
 }
-nav .hamburger {
+header nav .hamburger {
   height: 30px;
   width: 30px;
 }
-nav .hamburger .line {
+header nav .hamburger .line {
   width: 30px;
   height: 2px;
   background-color: white;
   margin: 6px 0;
 }
-nav .hamburger:hover {
+header nav .hamburger:hover {
   cursor: pointer;
 }
-nav .hamburger.is-active .line:nth-child(1) {
+header nav .hamburger.is-active .line:nth-child(1) {
   transition: transform 0.3s ease-in-out;
   transform: rotate(45deg) translate(5px, 5px);
 }
-nav .hamburger.is-active .line:nth-child(2) {
+header nav .hamburger.is-active .line:nth-child(2) {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
-nav .hamburger.is-active .line:nth-child(3) {
+header nav .hamburger.is-active .line:nth-child(3) {
   transition: transform 0.3s ease-in-out;
   transform: rotate(-45deg) translate(5px, -5px);
 }
-nav .hamburger:not(.is-active) .line {
+header nav .hamburger:not(.is-active) .line {
   transition: transform 0.3s ease-in-out;
 }
-nav .hamburger:not(.is-active) .categories {
+header nav .hamburger:not(.is-active) .categories {
   opacity: 0;
 }
-nav .categories {
+header nav .categories {
   color: red;
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
+}
+header .categories {
+  opacity: 0;
+}
+header .categories.is-active {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+header .categories:not(.is-active) {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+header .categories .category {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 40px;
+}
+header .categories .category:hover {
+  cursor: pointer;
+  color: green;
+}
+header .categories .social {
+  display: flex;
+  width: 100%;
+}
+header .categories .social .social-icon {
+  margin-right: 20px;
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+}
+header .categories .social .social-icon:hover {
+  cursor: pointer;
+}
+header .categories .social .social-icon img {
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
