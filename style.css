@@ -1,4 +1,5 @@
 body {
+  scroll-behavior: smooth;
   background-color: #f5f5f5;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -129,4 +130,22 @@ main .presentation .image img {
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
+}
+main .projects {
+  text-align: center;
+  background-color: lightgray;
+}
+main .projects .flex-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .projects div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .projects img {
+  width: 60%;
 }/*# sourceMappingURL=style.css.map */
