@@ -156,4 +156,9 @@ main .projects div {
 }
 main .projects img {
   width: 60%;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

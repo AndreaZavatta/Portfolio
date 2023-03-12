@@ -12,6 +12,12 @@ window.onload = function() {
     addSmoothScrollTransition();
 }
 
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 43.99, lng: 12.66 },
+        zoom: 15,
+    });
+}
 function addSmoothScrollTransition(){
     var links = document.querySelectorAll('a[href^="#"]');
     for (var i = 0; i < links.length; i++) {
