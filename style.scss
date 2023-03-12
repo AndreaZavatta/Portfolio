@@ -7,6 +7,11 @@ body{
     padding: 0;
 }
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     nav{
         height: 80px;
         color : white;
@@ -106,11 +111,13 @@ header{
     }
 }
 main{
+    section{
+        padding-top: 60px;     
+    }
     .presentation{
         height: 655px;
         display: flex;
         justify-content: space-between;
-        background-color: lightgray;
         .text{
             width: 65%;
             display: flex;
@@ -141,7 +148,6 @@ main{
     }
     .projects{
         text-align: center;
-        background-color: lightgray;
         .flex-cards{
             display: flex;
             justify-content: center;
