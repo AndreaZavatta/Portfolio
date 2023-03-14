@@ -185,6 +185,19 @@ main .projects, main .skills, main .education {
   align-items: center;
   flex-direction: column;
 }
+main .skills .card-body-item-body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .skills .card-body-item-body img {
+  filter: invert(90%);
+  width: 70px;
+  height: 70px;
+}
 main #map {
   height: 320px;
   width: 100%;

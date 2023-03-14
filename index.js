@@ -1,5 +1,6 @@
 let mode = 0;
 window.onload = function() {
+
     toggleActiveMenu();
     document.querySelector(".mod").addEventListener("click", () => changeMode());
     document.querySelector(".mod").addEventListener("mouseover", () => changeMode());
@@ -19,6 +20,9 @@ function changeMode(){
         document.documentElement.style.setProperty("--nav-color", "white");
         document.documentElement.style.setProperty("--text-color", "black");
         document.documentElement.style.setProperty("--hamburger-color", "black");
+        document.querySelectorAll(".skills .card-body-item-body img").forEach(function(el) {
+            el.style.filter = "none";
+        });
         mode = 1;
     }else{
         // dark mode
@@ -31,6 +35,9 @@ function changeMode(){
         document.documentElement.style.setProperty("--nav-color", "#272B33");
         document.documentElement.style.setProperty("--text-color", "white");
         document.documentElement.style.setProperty("--hamburger-color", "white");
+        document.querySelectorAll(".skills .card-body-item-body img").forEach(function(el) {
+            el.style.filter = "invert(90%)";
+        });
         mode = 0;
     }
 }
