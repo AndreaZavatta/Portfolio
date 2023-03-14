@@ -130,6 +130,8 @@ header{
 }
 main{
     section{
+        text-align: center;
+        height: 90vh;
         padding-top: 60px;   
     }
     .presentation{
@@ -165,7 +167,6 @@ main{
         }
     }
     .projects{
-        text-align: center;
         .flex-cards{
             display: flex;
             justify-content: center;
@@ -187,6 +188,12 @@ main{
         img{
             width: 60%;
         }
+    }
+    .projects, .skills, .education{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     #map{
         height: 320px;

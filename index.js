@@ -11,29 +11,11 @@ window.onload = function() {
         });
     });
 
-    document.querySelector(".mod").addEventListener("click", function() {
-        changeMode();
-    });
-
-    document.querySelector(".mod").addEventListener("mouseover", function() {
-        changeMode();
-    });
-
-    document.querySelector(".mod").addEventListener("mouseout", function() {
-        changeMode();
-    });
+    document.querySelector(".mod").addEventListener("click", () => changeMode());
+    document.querySelector(".mod").addEventListener("mouseover", () => changeMode());
+    document.querySelector(".mod").addEventListener("mouseout", () => changeMode());
 
     addSmoothScrollTransition();
-    //document.getElementById("newsTodayText").innerText = "ciao";
-
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    $(function() {
-        $.get("http://numbersapi.com/"+mm+"/"+dd+"/date", function(data) {
-            $("#newsTodayText").text(data);
-        });
-    });
 }
 
 function changeMode(){
@@ -64,12 +46,6 @@ function changeMode(){
     }
 }
 
-function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 43.99, lng: 12.66 },
-        zoom: 15,
-    });
-}
 function addSmoothScrollTransition(){
     var links = document.querySelectorAll('a[href^="#"]');
     for (var i = 0; i < links.length; i++) {

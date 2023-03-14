@@ -122,6 +122,8 @@ header .mod img {
 }
 
 main section {
+  text-align: center;
+  height: 90vh;
   padding-top: 60px;
 }
 main .presentation {
@@ -156,9 +158,6 @@ main .presentation .image img {
   width: 10rem;
   border-radius: 50%;
 }
-main .projects {
-  text-align: center;
-}
 main .projects .flex-cards {
   display: flex;
   justify-content: center;
@@ -179,6 +178,12 @@ main .projects div {
 }
 main .projects img {
   width: 60%;
+}
+main .projects, main .skills, main .education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 main #map {
   height: 320px;
