@@ -15,6 +15,14 @@ window.onload = function() {
         changeMode();
     });
 
+    document.querySelector(".mod").addEventListener("mouseover", function() {
+        changeMode();
+    });
+
+    document.querySelector(".mod").addEventListener("mouseout", function() {
+        changeMode();
+    });
+
     addSmoothScrollTransition();
     //document.getElementById("newsTodayText").innerText = "ciao";
 
