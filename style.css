@@ -1,6 +1,16 @@
+:root {
+  --back-color: #0A0C10;
+  --nav-color: #272B33;
+  --text-color:white;
+  --nav-hover-color: green;
+  --social-color: white;
+  --hamburger-color: white;
+}
+
 body {
+  color: var(--text-color);
   scroll-behavior: smooth;
-  background-color: #f5f5f5;
+  background-color: var(--back-color);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   margin: 0;
@@ -16,10 +26,10 @@ header {
 }
 header nav {
   height: 80px;
-  color: white;
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: var(--nav-color);
   align-items: center;
   padding: 0 37px;
 }
@@ -30,7 +40,7 @@ header nav .hamburger {
 header nav .hamburger .line {
   width: 30px;
   height: 2px;
-  background-color: white;
+  background-color: var(--hamburger-color);
   margin: 6px 0;
 }
 header nav .hamburger:hover {
@@ -69,22 +79,22 @@ header .categories:not(.is-active) {
 }
 header .categories .category {
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: var(--nav-color);
+  color: var(--text-color);
   padding: 10px 40px;
 }
 header .categories .category a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 500;
 }
 header .categories .category a:hover {
-  color: green;
+  color: var(--nav-hover-color);
 }
 header .categories .category:hover {
   cursor: pointer;
-  color: green;
+  color: var(--nav-hover-color);
 }
 header .categories .social {
   display: flex;
@@ -94,7 +104,7 @@ header .categories .social .social-icon {
   margin-right: 20px;
   height: 35px;
   width: 35px;
-  background-color: white;
+  background-color: var(--social-color);
   border-radius: 50%;
 }
 header .categories .social .social-icon:hover {
@@ -103,6 +113,12 @@ header .categories .social .social-icon:hover {
 header .categories .social .social-icon img {
   height: 100%;
   width: 100%;
+}
+header .mod:hover {
+  cursor: pointer;
+}
+header .mod img {
+  width: 20px;
 }
 
 main section {
@@ -147,7 +163,14 @@ main .projects .flex-cards {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+}
+main .projects .flex-cards img {
+  width: 100%;
+  max-height: 200px;
+}
+main .projects .flex-cards div {
+  width: 100%;
 }
 main .projects div {
   width: 100%;
@@ -157,8 +180,8 @@ main .projects div {
 main .projects img {
   width: 60%;
 }
-
-#map {
-  height: 400px;
+main #map {
+  height: 320px;
   width: 100%;
+  margin-bottom: 50px;
 }/*# sourceMappingURL=style.css.map */

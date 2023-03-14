@@ -1,6 +1,16 @@
+:root{
+    --back-color: #0A0C10;
+    --nav-color: #272B33;
+    --text-color:white;
+    --nav-hover-color: green;
+    --social-color: white;
+    --hamburger-color: white;
+}
+
 body{
+    color: var(--text-color);
     scroll-behavior: smooth;
-    background-color: #f5f5f5;
+    background-color: var(--back-color);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
@@ -14,10 +24,10 @@ header{
     z-index: 100;
     nav{
         height: 80px;
-        color : white;
+        color : var(--text-color);
         display: flex;
         justify-content: space-between;
-        background-color: black;
+        background-color: var(--nav-color);
         align-items: center;
         padding: 0 37px;
 
@@ -27,7 +37,7 @@ header{
             .line{
                 width: 30px;
                 height: 2px;
-                background-color: white;
+                background-color: var(--hamburger-color);
                 margin: 6px 0;
             }
             &:hover{
@@ -72,22 +82,22 @@ header{
             left: -100%;
         }
         .category{
+            width: 100%;
+            background-color: var(--nav-color);
+            color: var(--text-color);
+            padding: 10px 40px;
             a{
                 text-decoration: none;
-                color: white;
+                color: var(--text-color);
                 font-size: 1.2rem;
                 font-weight: 500;
                 &:hover{
-                    color: green;
+                    color: var(--nav-hover-color);
                 }
             }
-            width: 100%;
-            background-color: black;
-            color: white;
-            padding: 10px 40px;
             &:hover{
                 cursor: pointer;
-                color: green;
+                color: var(--nav-hover-color);
             }
         }
         .social{
@@ -97,7 +107,7 @@ header{
                 margin-right: 20px;
                 height: 35px;
                 width: 35px;
-                background-color: white;
+                background-color: var(--social-color);
                 border-radius: 50%;
                 &:hover{
                     cursor: pointer;
@@ -109,10 +119,18 @@ header{
             };
             }
     }
+    .mod{ 
+        &:hover{
+            cursor: pointer;
+        }
+        img{
+            width: 20px;
+        }
+    }
 }
 main{
     section{
-        padding-top: 60px;     
+        padding-top: 60px;   
     }
     .presentation{
         height: 655px;
@@ -152,7 +170,14 @@ main{
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: row;
+            img{
+                width: 100%;
+                max-height: 200px;
+            }
+            div{
+                width: 100%;
+            }
         }
         div{
             width: 100%;
@@ -163,12 +188,13 @@ main{
             width: 60%;
         }
     }
+    #map{
+        height: 320px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
 }
 
-#map{
-    height: 400px;
-    width: 100%;
-}
 
 
 
