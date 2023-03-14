@@ -1,20 +1,9 @@
 let mode = 0;
 window.onload = function() {
-    document.querySelector(".hamburger").addEventListener("click", function() {
-        document.querySelector(".hamburger").classList.toggle("is-active");
-        document.querySelector(".categories").classList.toggle("is-active");
-    });
-    document.querySelectorAll(".categories a").forEach(function(el) {
-        el.addEventListener("click", function() {
-            document.querySelector(".hamburger").classList.toggle("is-active");
-            document.querySelector(".categories").classList.toggle("is-active");
-        });
-    });
-
+    toggleActiveMenu();
     document.querySelector(".mod").addEventListener("click", () => changeMode());
     document.querySelector(".mod").addEventListener("mouseover", () => changeMode());
     document.querySelector(".mod").addEventListener("mouseout", () => changeMode());
-
     addSmoothScrollTransition();
 }
 
@@ -57,4 +46,17 @@ function addSmoothScrollTransition(){
             });
         });
     }
+}
+
+function toggleActiveMenu(){
+    document.querySelector(".hamburger").addEventListener("click", function() {
+        document.querySelector(".hamburger").classList.toggle("is-active");
+        document.querySelector(".categories").classList.toggle("is-active");
+    });
+    document.querySelectorAll(".categories a").forEach(function(el) {
+        el.addEventListener("click", function() {
+            document.querySelector(".hamburger").classList.toggle("is-active");
+            document.querySelector(".categories").classList.toggle("is-active");
+        });
+    });
 }
