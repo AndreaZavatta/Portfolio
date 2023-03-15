@@ -215,9 +215,7 @@ main{
         width: 100%;
         margin-bottom: 50px;
     }
-    .chatbot{
-        width: 100px;
-        height: 100px;
+    .chatbot, .chatbot-program{
         position:fixed;
         bottom: 0;
         right: 0;
@@ -235,12 +233,44 @@ main{
         }
 
     }
+
+    .chatbot{
+        width: 100px;
+        height: 100px;
+        &.is-active{
+            visibility: visible;
+        }
+        &:not(is-active){
+            visibility: hidden;
+        }
+    }
+    .chatbot-program{
+        width: 300px;
+        height: 500px;
+        .close{
+            filter: invert(70%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        iframe{
+            width: 100%;
+            height: 400px;
+        }
+        &.is-active{
+            visibility: visible;
+        }
+        &:not(is-active){
+            visibility: hidden;
+        }
+    }
 }
-
-
-
-
-
 
 
 

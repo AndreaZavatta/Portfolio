@@ -8,6 +8,14 @@ window.onload = function () {
     modButton.addEventListener("mouseover", () => mouseoverEvent())
     modButton.addEventListener("mouseout", () => mouseoutEvent())
     addSmoothScrollTransition()
+    document.querySelector(".chatbot").addEventListener("click", function (){
+        document.querySelector(".chatbot").classList.toggle("is-active")
+        document.querySelector(".chatbot-program").classList.toggle("is-active")
+    });
+    document.querySelector(".close").addEventListener("click", function (){
+        document.querySelector(".chatbot").classList.toggle("is-active")
+        document.querySelector(".chatbot-program").classList.toggle("is-active")
+    })
 }
 
 function mouseclickEvent() {
@@ -29,6 +37,7 @@ function changeMode() {
         })
         document.querySelector("iframe").style.filter = "none"
         document.querySelector(".mod img").style.filter = "invert(90%)"
+        document.querySelector(".close").style.filter = "invert(70%)"
         document.documentElement.style.setProperty("--back-color", "lightgray")
         document.documentElement.style.setProperty("--nav-color", "white")
         document.documentElement.style.setProperty("--text-color", "black")
@@ -61,7 +70,7 @@ function changeMode() {
 
 function addSmoothScrollTransition() {
     const links = document.querySelectorAll('a[href^="#"]')
-    for (let i of links) {
+    for (let i=0; i<links.length; i++) {
         links[i].addEventListener("click", function (e) {
             e.preventDefault()
             const target = document.querySelector(this.getAttribute("href"))
