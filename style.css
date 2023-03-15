@@ -121,6 +121,9 @@ header .mod img {
   width: 20px;
 }
 
+main {
+  position: relative;
+}
 main section {
   text-align: center;
   height: 90vh;
@@ -185,7 +188,7 @@ main .projects, main .skills, main .education {
   align-items: center;
   flex-direction: column;
 }
-main .skills .card-body-item-body {
+main .skills .card-body-item-body, main .cody {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -193,7 +196,7 @@ main .skills .card-body-item-body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-main .skills .card-body-item-body img {
+main .skills .card-body-item-body img, main .cody img {
   filter: invert(90%);
   width: 70px;
   height: 70px;
@@ -202,4 +205,23 @@ main #map {
   height: 320px;
   width: 100%;
   margin-bottom: 50px;
+}
+main .chatbot {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .chatbot img {
+  width: 80%;
+}
+main .chatbot:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -129,6 +129,7 @@ header{
     }
 }
 main{
+    position:relative;
     section{
         text-align: center;
         height: 90vh;
@@ -195,7 +196,7 @@ main{
         align-items: center;
         flex-direction: column;
     }
-    .skills .card-body-item-body{
+    .skills .card-body-item-body, .cody{
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -213,6 +214,26 @@ main{
         height: 320px;
         width: 100%;
         margin-bottom: 50px;
+    }
+    .chatbot{
+        width: 100px;
+        height: 100px;
+        position:fixed;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+        border-radius: 20px;
+        background-color: var(--nav-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 80%;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+
     }
 }
 
