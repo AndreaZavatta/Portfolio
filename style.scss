@@ -70,6 +70,7 @@ header{
         }
     }
     .categories{
+        background-color: var(--nav-color);
         opacity: 0;
         &.is-active{
             transition: opacity 0.3s ease-in-out;
@@ -83,7 +84,6 @@ header{
         }
         .category{
             width: 100%;
-            background-color: var(--nav-color);
             color: var(--text-color);
             padding: 10px 40px;
             a{
@@ -270,6 +270,46 @@ main{
             visibility: hidden;
         }
     }
+}
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    nav{
+        visibility: hidden;
+    }
+    .categories{
+        position: absolute;
+        top: 0;
+        width: 20%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        overflow: hidden;
+        width: 80%;
+        float: right;
+    }
+    main div{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
 }
 
 

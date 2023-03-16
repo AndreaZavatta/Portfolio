@@ -2,6 +2,20 @@ let mode = 0
 let isClick = false
 
 window.onload = function () {
+    addEventListener("resize", (event) => {
+        if(window.matchMedia("(min-width: 768px)").matches) {
+            document.querySelector(".categories").classList.add("is-active")
+            document.querySelectorAll(".category").forEach(function (el) {
+                el.style.textAlign = "center"
+            })
+        }else{
+            document.querySelector(".categories").classList.remove("is-active")
+            document.querySelectorAll(".category").forEach(function (el) {
+                el.style.textAlign = "left"
+            })
+        }
+    });
+    window.dispatchEvent(new Event('resize'));
     const modButton = document.querySelector(".mod")
     toggleActiveMenu()
     modButton.addEventListener("click", () => mouseclickEvent())
@@ -16,7 +30,11 @@ window.onload = function () {
         document.querySelector(".chatbot").classList.toggle("is-active")
         document.querySelector(".chatbot-program").classList.toggle("is-active")
     })
+
+
 }
+
+
 
 function mouseclickEvent() {
     isClick = true
