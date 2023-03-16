@@ -106,8 +106,10 @@ function toggleActiveMenu() {
     })
     document.querySelectorAll(".categories a").forEach(function (el) {
         el.addEventListener("click", function () {
-            document.querySelector(".hamburger").classList.toggle("is-active")
-            document.querySelector(".categories").classList.toggle("is-active")
+            if(window.matchMedia("(max-width: 768px)").matches){
+                document.querySelector(".hamburger").classList.toggle("is-active")
+                document.querySelector(".categories").classList.toggle("is-active")
+            }
         })
     })
 }
