@@ -297,9 +297,9 @@ main{
         width: 80%;
         float: right;
     }
-    main div{
-        padding-left: 50px;
-        padding-right: 50px;
+    main > section{
+        padding-left: 150px;
+        padding-right: 150px;
     }
 
 }

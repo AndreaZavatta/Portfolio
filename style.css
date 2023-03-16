@@ -285,9 +285,9 @@ main .chatbot-program:not(is-active) {
     width: 80%;
     float: right;
   }
-  main div {
-    padding-left: 50px;
-    padding-right: 50px;
+  main > section {
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 @media only screen and (max-width: 767px) {
