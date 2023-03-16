@@ -98,11 +98,7 @@ header .categories .category:hover {
 }
 header .categories .social {
   display: flex;
-  justify-content: center;
-  gap: 20px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 header .categories .social .social-icon {
   height: 35px;
@@ -282,10 +278,14 @@ main .chatbot-program:not(is-active) {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
   }
   main {
     overflow: hidden;
-    width: 80%;
+    width: calc(100% - 225px);
     float: right;
   }
   main > section {

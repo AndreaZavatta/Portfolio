@@ -104,7 +104,6 @@ header{
             display: flex;
             width: 100%;
             .social-icon{
-                margin-right: 20px;
                 height: 35px;
                 width: 35px;
                 background-color: var(--social-color);
@@ -291,10 +290,14 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 20px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
     }
     main{
         overflow: hidden;
-        width: 80%;
+        width: calc(100% - 225px);
         float: right;
     }
     main > section{
