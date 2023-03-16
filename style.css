@@ -268,7 +268,7 @@ main .chatbot-program:not(is-active) {
   .categories {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 225px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -286,8 +286,8 @@ main .chatbot-program:not(is-active) {
     float: right;
   }
   main > section {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 13%;
+    padding-right: 13%;
   }
 }
 @media only screen and (max-width: 767px) {
