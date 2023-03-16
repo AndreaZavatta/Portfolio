@@ -98,10 +98,13 @@ header .categories .category:hover {
 }
 header .categories .social {
   display: flex;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 header .categories .social .social-icon {
-  margin-right: 20px;
   height: 35px;
   width: 35px;
   background-color: var(--social-color);
